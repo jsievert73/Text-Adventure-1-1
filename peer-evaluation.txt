@@ -1,0 +1,40 @@
+Name: Jacob Sievert
+Date: 09/28/2019
+Project: P03-Text Adventure
+Peer's repository: https://github.com/inewhart/03-Text-adventure-1.git
+
+
+
+What is something you learned by reviewing your peer's project?
+I learned a helpful reminder to be wary of local versus global variables. In lines 29 and 30, the quit will not affect the game,
+because the variable at that point is only accessible by the update function, rather than the main function. 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+The .strip() and .upper() functions are both very useful functions that I would like to apply in the future.
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+If you make quit a global variable at the start of the main file, you could make it so that the game will 
+quit like it's supposed to on death or escape to the nearest town.
+ 
+
+What could have been clearer or better commented?
+The functions are very clear on what they should do as a whole, but it never hurts to comment and explain more complicated areas of the functions.
+A great spot to try this would be lines 25-27 so that someone unfamiliar with your json file structure could understand what was going on.
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+Nope.
+ 
+
+The repository contains an appropriate license.
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+You could give a short description of your game as well.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+I greatly appreciate how succinct your code is.
+It makes it easier to understand, edit, and fix when you write code in that fashion, so it's a great habit to get in and keep.
+

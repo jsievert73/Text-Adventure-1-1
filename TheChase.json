@@ -1,0 +1,321 @@
+{
+  "verbs": [
+    { "v": "NORTH",   "map": "NORTH" },
+    { "v": "WEST",    "map": "WEST"  },
+    { "v": "EAST",    "map": "EAST" },
+    { "v": "SOUTH",   "map": "SOUTH" },
+    { "v": "QUIT",   "map": "QUIT" }
+  ],
+
+  "rooms": {
+    "START": {
+      "name": "START",
+      "desc": "You were kidnapped and managed to escape by going north, but now you have to run and get to a safe location, which way do you go",
+      "exits": [
+        {
+          "verb": "NORTH",
+          "target": "CORNFIELD",
+          "condition": ""
+        },
+        {
+          "verb": "WEST",
+          "target": "LAKE",
+          "condition": ""
+        },
+        {
+          "verb": "EAST",
+          "target": "CLEARING",
+          "condition": ""
+        },
+        {
+          "verb": "SOUTH",
+          "target": "DEATH",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CORNFIELD": {
+      "name": "cornfield",
+      "desc": "You head straight and run into a cornfield spanning as far as you can see a path follows the edge of the corn going west and east,\n go through the corn north or turn back south, which way will you continue",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "HOUSE",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "RIVER",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "CROSSROAD",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "START",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "LAKE": {
+      "name": "lake",
+      "desc": "You and are faced with a lake that covers both west and south either turnback east or follow the shore north.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "RIVER",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "LAKE",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "START",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "LAKE",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "CLEARING": {
+      "name": "clearing",
+      "desc": "You come to an clearing where both south and east are fenced off by a high fence, choose to either backtrack west or follow the fence north.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "CROSSROAD",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "START",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "CLEARING",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "CLEARING",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "CROSSROAD": {
+      "name": "crossroad",
+      "desc": "You come to a 4-way path west will follow along a cornfield north will follow an old dirt road, \neast leads into a wooded trail and south seems to head to an opening which way will you proceed.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "ROAD",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "CORNFIELD",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "WOODS",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "CLEARING",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "BARN": {
+      "name": "barn",
+      "desc": "You are walking and run into a very dilapidated barn with an impassable junkyard to its north what looks like a house off to the west \n a road leading south and woods to the east, which way would you like to go.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "BARN",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "HOUSE",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "DEATH",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "CROSSROADS",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "HOUSE": {
+      "name": "house",
+      "desc": "You come to an old burned down house with a very muddy field to the north blocking your path, a cornfield to the south,\n a broken down barn to the east, and a paved road to the west, which way are you gonna go.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "HOUSE",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "HIGHWAY",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "BARN",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "CORNFIELD",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "RIVER": {
+      "name": "river",
+      "desc": "You come to a river to the west is a bridge seeming with a sign that reads school 5 miles ahead, to the north a trail following the river, \nto the east a road leading to a cornfield in the distance, and south follws the path of the river to what looks like a lake, which pathh will you take.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": " HIGHWAY",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "SCHOOL",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "CORNFIELD",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "LAKE",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "HIGHWAY": {
+      "name": "highway",
+      "desc": "You come to a highway bridge, to the west a sign shows a town a few miles away, to the notrth the highway and river block the path,\n to the east a road leads somewhere, and to the south there appears to be a path along the river.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "HIGHWAY",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "TOWN",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "HOUSE",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "RIVER",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "WOODS": {
+      "name": "woods",
+      "desc": "You find yourself in a heavily wooded area to the south and east the ground starts to turn into a swamp making any hope of travel in those directions impossible,\n to the west is the dirrection you just came, and to the north you can see what looks like a rather sketchy house in the distance,Pick your direction.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "DEATH",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "CROSSROAD",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "WOODS",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "WOODS",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "SCHOOL": {
+      "name": "school",
+      "desc": "You come to the front of a school that blocks the way to the west and south the only ways to go are either to backtrack east to the river\n or head south towards the town label on a sign to be 5 miles away, where do you go.",
+      "exits": [
+          {
+              "verb": "NORTH",
+              "target": "TOWN",
+              "condition": ""
+            },
+            {
+              "verb": "WEST",
+              "target": "SCHOOL",
+              "condition": ""
+            },
+            {
+              "verb": "EAST",
+              "target": "RIVER",
+              "condition": ""
+            },
+            {
+              "verb": "SOUTH",
+              "target": "SCHOOL",
+              "condition": ""
+            }
+          ],
+      "inventory": []
+    },
+    "TOWN": {
+      "name": "town",
+      "desc": "You follow the signs to make it to the nearest town, \n you head to the police station, and they are able to contact the proper authorities to get you to a safe place.",
+      "exits": [],
+      "inventory": []
+    },
+    "DEATH": {
+      "name": "death",
+      "desc": "You walk up to the mysterious house in the woods. As you aproach the building you are faced with your captors,\n as you turn away you feel a sharp pain in your chest falling to the ground you start to lose consciousness. YOU HAVE DIED!",
+      "exits": [],
+      "inventory": []
+    }
+    }
+  }
